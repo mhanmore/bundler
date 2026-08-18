@@ -158,3 +158,22 @@ Background Documents,document,Witness Statement of Jane Smith dated 04 March 202
 2. `entry_type` must be `section_heading` or `document`.
 3. `entry_type=document` rows with a non-empty `file_name` must resolve to an existing PDF.
 4. `entry_type=section_heading` rows must have an empty `file_name`.
+
+## Other tools
+
+`add_margin_lines.py` and `ruler_overlay.py` are a standalone side-pair, unrelated
+to the bundling pipeline above — they are not called by `preview_bundle.py` or
+`export_bundle.py`, and use their own TOML config format (not `_case.toml`).
+
+- **`ruler_overlay.py`** — overlays a two-sided mm/cm ruler down the left margin
+  of every page of a PDF, to measure where a highlight line should sit by eye.
+  `.venv/bin/python ruler_overlay.py <input.pdf> [--output PATH]`
+- **`add_margin_lines.py`** — draws a coloured vertical line in the margin of
+  specified page ranges, to flag passages as essential reading (e.g. for a
+  reader working through a large bundle). Config is a `[[bundle]]`-array TOML
+  file listing input/output PDFs, page ranges, and line placement/colour.
+  `.venv/bin/python add_margin_lines.py <config.toml> [--base-dir PATH]`
+
+Typical use: run `ruler_overlay.py` on a PDF once to find the right page
+coordinates, note the measurements, then write an `add_margin_lines.py` config
+and run it on the real (unruled) PDF.
