@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "bundler"
+version = "0.1.0"
+description = "UK Administrative Court Claim Bundle Builder"
+authors = ["mh"]
+packages = [{include = "bundler"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4"
+reportlab = ">=4.0"
+pypdf = ">=4.0"
+pymupdf = ">=1.24"
+tomli-w = "^1.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

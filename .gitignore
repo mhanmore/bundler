@@ -1,0 +1,17 @@
+# Case-specific source files (PDFs, CSV, TOML) — not committed
+source/
+
+# Build output
+output/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# OS / editor
+.DS_Store
+
+# Local Claude Code permissions (may reference matter-specific paths)
+.claude/settings.json
