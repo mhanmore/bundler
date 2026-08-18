@@ -1,0 +1,6 @@
+charset-normalizer==3.4.5 ; python_version >= "3.11" and python_version < "4"
+pillow==12.1.1 ; python_version >= "3.11" and python_version < "4"
+pymupdf==1.28.2 ; python_version >= "3.11" and python_version < "4"
+pypdf==6.8.0 ; python_version >= "3.11" and python_version < "4"
+reportlab==4.4.10 ; python_version >= "3.11" and python_version < "4"
+tomli-w==1.2.0 ; python_version >= "3.11" and python_version < "4"
