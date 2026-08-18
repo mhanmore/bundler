@@ -1,5 +1,14 @@
 # UK Administrative Court Claim Bundle Builder
 
+> **Note:** this document is the original project spec and describes the intended
+> end state, not necessarily current behaviour. See `todo.md` for what is
+> implemented versus outstanding, and `README.md` for the actual current input
+> formats and CLI. As of the current codebase: pagination, index generation with
+> hyperlinks/bookmarks, page-number stamping, and both cover styles (court and
+> statdec, see README) are implemented. The 20MB pre-flight rule, core/further
+> bundle splitting, OCR/searchability validation, filing-mode CLI handling, and
+> the compliance report below are **not yet implemented**.
+
 ## Project Goal
 Automate conversion of PDF documents into claim-filing bundles compliant with UK High Court (Administrative Court) electronic bundle requirements.
 
